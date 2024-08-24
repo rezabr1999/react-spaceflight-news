@@ -32,13 +32,27 @@ const ArticleUI: React.FC<{ article: ArticleProp }> = ({ article }) => {
         {" "}
         {truncateText(article.summary, 100)}
       </p>
-      <a
-        href={article.url}
-        target="_blank"
-        className="text-white text-center p-2 bg-blue-600"
-      >
-        Read more
-      </a>
+      <div className="flex gap-2">
+        <a
+          href={article.url}
+          target="_blank"
+          className="text-white text-center p-2 bg-blue-600 flex-1"
+        >
+          Read more
+        </a>
+        <button
+          type="button"
+          className="flex-1 bg-yellow-700 text-white"
+        >
+          Save
+        </button>
+        <button
+          type="button"
+          className="flex-1 bg-green-600 text-white"
+        >
+          Like
+        </button>
+      </div>
     </div>
   );
 };
